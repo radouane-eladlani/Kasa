@@ -8,5 +8,5 @@ function Banner() {
             <h1 className="banner_h1">chez vous, partout et ailleurs</h1>
         </div>
     );
-    }
-    export default Banner;
+}
+export default Banner;
