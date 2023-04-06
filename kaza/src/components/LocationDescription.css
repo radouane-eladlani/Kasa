@@ -1,0 +1,30 @@
+.page_location_description p{
+    margin-block: 0;
+ }
+ @media screen and (width <=  425px){
+    .page_location_description{
+         font-size: 13px;
+     }
+ }
+
+ .description_titre{
+     background-color: #FF6060;
+     color: white;
+     border-radius: 10px;
+     padding:1rem;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     
+ }
+ .description_texte{
+     background-color: #e3e3e3;
+     border-radius: 10px;
+     padding:1rem;
+     font-weight: 300;
+     position: relative;
+     top: -5px;
+     z-index: -1;
+ }
+ 
+ 

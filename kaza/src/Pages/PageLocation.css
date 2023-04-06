@@ -1,0 +1,14 @@
+.page__location{
+    color: #FF6060;
+}
+.page_location_description_displayflex{
+    display: flex;
+    gap: 5%;
+}
+@media screen and (width <=  768px){
+    .page_location_description_displayflex{
+         display: flex;
+         flex-direction: column;
+         gap: 0;
+     }
+ }

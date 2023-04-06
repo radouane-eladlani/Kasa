@@ -1,0 +1,156 @@
+
+
+.page_location_titre_de_la_location{
+    font-weight: 400;
+    margin-bottom: 0;
+    margin-top:10px;
+}
+@media screen and (width <=  425px){
+    .page_location_titre_de_la_location{
+         font-size: 18px;
+
+     }
+ }
+.page_location_titre_ville{
+    font-weight: 400;
+    font-size: 1.1rem;
+    margin-top: 5px;
+}
+@media screen and (width <=  425px){
+    .page_location_titre_ville{
+         font-size: 14px;
+
+     }
+ }
+.display_flex_titre{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.page_location_span{
+    background-color: #FF6060;
+    color: white;
+    height: 25px;
+    width: 115px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media screen and (width <=  425px){
+    .page_location_span{
+        height: 18px;
+        width: 84px;
+        font-size: 10px;
+
+     }
+ }
+.page_location_les_spans{
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+   
+}
+
+.display_flex{
+    display: flex;
+    align-items: flex-end;
+    text-align: end;
+    flex-direction: column;
+}
+
+.page_location_profil_proprietaire{
+    margin-top: 10px;
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5px;
+    
+}
+.display_flex_profil{
+    display: flex;
+    justify-content: space-between;
+}
+@media screen and (width <=  768px){
+    .display_flex_profil{
+        display: flex;
+        flex-direction: column;
+        
+        
+    }
+}
+.display_profil_proprietaire{
+    display: flex;
+    flex-direction: column;
+}
+@media screen and (width <=  768px){
+    .display_profil_proprietaire{
+        
+        display: flex;
+flex-direction: row-reverse;
+align-items: center;
+justify-content: space-between;
+    
+    }
+}
+@media screen and (width <=  768px){
+   .page_location_profil_proprietaire{
+        align-items: center;
+        margin-top: 0;
+        
+    }
+}
+
+
+.page_location_nom_proprietaire{
+    font-weight: 400;
+    font-size: 1.1rem;
+    margin-block: 0;
+    text-align: right;
+    margin-right: 10px;
+}
+@media screen and (width <=  425px){
+    .page_location_nom_proprietaire{
+         margin-right: 20px;
+         
+     }
+ }
+ @media screen and (width <=  425px){
+    .page_location_nom_proprietaire{
+         font-size: 12px;
+         
+     }
+ }
+
+.page_location_profil_proprietaire_badge{
+    background-color: #c4c4c4;
+    height: 64px;
+    width: 64px;
+    border-radius: 50px;
+}
+
+.page_location_profil_proprietaire_etoile{
+    font-size: 1.5em;
+    margin-top: 6px;
+}
+
+
+.etoile_rouge{
+    color: #FF6060;
+    padding-right: 10px;
+}
+@media screen and (width <=  425px){
+    .etoile_rouge{
+         font-size: 1.0rem;
+     }
+ }
+.etoile_grise{
+    color: #e3e3e3;
+    padding-right: 10px;
+}
+@media screen and (width <=  425px){
+    .etoile_grise {     
+       font-size: 1.0rem;
+     }
+ }

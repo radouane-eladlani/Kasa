@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import PageAccueil from './Pages/PageAccueil';
+import PageLocation from './Pages/PageLocation';
 import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import Main from './components/Main';
+import Footer from './mis_en_page/Footer';
+import Main from './mis_en_page/Main';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, Outlet } from "react-router-dom";
 import { RouterProvider } from 'react-router-dom';
@@ -14,8 +14,9 @@ import { RouterProvider } from 'react-router-dom';
 const HeaderFooterLayout = () => {
   return (
     <>
-      <Navbar />
+      
       <Main>
+        <Navbar />
         <Outlet />
       </Main>
       <Footer />
@@ -27,7 +28,8 @@ const HeaderFooterLayout = () => {
 const router = createBrowserRouter([
   {
     /*
-    on utilise element pour définir le layout de l'application */
+    on utilise element pour définir le layout de l'application et outlet
+    pour afficher les composants dans chaque route */
     element: <HeaderFooterLayout />,
     /*
     on utilise errorElement pour définir la page d'erreur dans toute les routes */
@@ -39,12 +41,12 @@ const router = createBrowserRouter([
         /*on utilise path pour définir le chemin de la route */
         path: "/",
         /*on utilise element pour définir le composant à afficher */
-        element: <App />
+        element: <PageAccueil />
 
       },
       {
-        path: "/flat",
-        element: <div>Nos locations</div>
+        path: "/PageLocation",
+        element: <PageLocation/>
 
       },
       {
