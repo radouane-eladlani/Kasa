@@ -1,14 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import PageAccueil from './Pages/PageAccueil';
-import PageLocation from './Pages/PageLocation';
-import Navbar from './components/Navbar';
-import Footer from './mis_en_page/Footer';
-import Main from './mis_en_page/Main';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, Outlet } from "react-router-dom";
 import { RouterProvider } from 'react-router-dom';
-
+import Navbar from './mis_en_page/Navbar';
+import Footer from './mis_en_page/Footer';
+import Main from './mis_en_page/Main';
+import PageAccueil from './Pages/PageAccueil';
+import PageLocation from './Pages/PageLocation';
+import PageApropos  from './Pages/PageApropos';
+import ErreurPageNotFound from './Pages/ErreurPageNotFound';
  /*HeaderFooterLayout est un composant qui permet de renseigner les composants pour
   afficher le header et le footer*/
 const HeaderFooterLayout = () => {
@@ -33,7 +34,7 @@ const router = createBrowserRouter([
     element: <HeaderFooterLayout />,
     /*
     on utilise errorElement pour définir la page d'erreur dans toute les routes */
-    errorElement: <h1> 404 Not found</h1>,
+    errorElement: <ErreurPageNotFound/>,
     /*
     children permet de définir les routes de l'application */
     children: [
@@ -45,13 +46,13 @@ const router = createBrowserRouter([
 
       },
       {
-        path: "/PageLocation",
+        path: "/Location",
         element: <PageLocation/>
 
       },
       {
-        path: "/about",
-        element: <div>A propos</div>
+        path: "/Apropos",
+        element: <PageApropos/>
       },
     ],
   },

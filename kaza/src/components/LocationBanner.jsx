@@ -5,7 +5,7 @@ export function LocationBanner() {
     return (
         
                 <div >
-                    <section className="image_location"></section>;
+                    <section className="image_location"></section>
                 </div>
     );
 }

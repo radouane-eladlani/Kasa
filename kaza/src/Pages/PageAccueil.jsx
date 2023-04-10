@@ -1,5 +1,5 @@
 import React from "react";
-import Banner from "../mis_en_page/Banner.jsx";
+import Banner from "../components/Banner.jsx";
 import Grille from "../components/Grille.jsx";
 import "./PageAccueil.css";
 
