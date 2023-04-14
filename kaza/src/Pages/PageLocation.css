@@ -1,14 +1,27 @@
 .page__location{
     color: #FF6060;
+    height: 50rem;
 }
 .page_location_description_displayflex{
     display: flex;
     gap: 5%;
 }
-@media screen and (width <=  768px){
+@media screen and (width <=  664px){
     .page_location_description_displayflex{
          display: flex;
          flex-direction: column;
-         gap: 0;
+         gap: 9px;
+         width: 100%;
      }
  }
+.loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #FF6060;
+    font-size: 2rem;
+}
+.padding-top{
+    padding-top: 1px;
+}

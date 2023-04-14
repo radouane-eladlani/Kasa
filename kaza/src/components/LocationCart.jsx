@@ -6,6 +6,9 @@ import "./LocationCart.css";
 function LocationCart(props) {
 const state = {
   locationId: props.id,
+  locationImages: props.images,
+
+
 };
 
   return (

@@ -19,7 +19,7 @@ function Grille() {
     return (
         <div className="grille">
             {logements.map((logement) => (
-                <LocationCart title={logement.title} imageUrl={logement.cover} id={logement.id}  />
+                <LocationCart key={logement.id} title={logement.title} imageUrl={logement.cover} id={logement.id} />
             ))}
         </div>
     );

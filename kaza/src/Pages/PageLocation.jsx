@@ -1,41 +1,47 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./PageLocation.css";
-import {LocationDescription} from "../components/LocationDescription";
+import { LocationDescription } from "../components/LocationDescription";
 import { LocationBanner } from "../components/LocationBanner";
-import { LocationDetail } from "../components/LocationDetail";
+import { LocationDetailProfil } from "../components/LocationDetailProfil";
 import { useLocation } from "react-router-dom";
 
 function PageLocation() {
     const location = useLocation();
-  console.log(location);
-  console.log("id:",location.state.locationId)
+    const [locationData, setLocationData] = useState(null);
 
-useEffect(() => {
-  fetchLocationData()
-});
+    useEffect(() => {
+        const annulerRequete = new AbortController();
+        fetch("logements.json", {
+            signal: annulerRequete.signal
+        })
+            .then((response) => response.json())
+            .then((apartement) => {
+                const logement = apartement.find((apartement) => apartement.id === location.state.locationId);
+                setLocationData(logement);
+            })
+            .catch((error) => console.log(error));
+        return () => annulerRequete.abort();
 
-function fetchLocationData() {
-    fetch("logements.json")
-    .then((response) => response.json())
-    .then((apartement) => {
-          const locationSelection = apartement.find((apartement) => apartement.id === location.state.locationId);
-          console.log(locationSelection);
-    })
-    .catch((error) => console.log(error));
-}
+    });
+
+    if (locationData == null) {
+        return <div className="loading">loading...</div>
+    }
     return (
         <div className="page__location">
             <div>
-                <LocationBanner/>
+                <LocationBanner pictures={locationData.pictures} />
             </div>
             <div>
-                <LocationDetail/>
+                <LocationDetailProfil locationData={locationData} />
             </div>
             <div className="page_location_description_displayflex">
-            <LocationDescription />
-            <LocationDescription /> 
+                <LocationDescription title="Description" contenu={locationData.description} />
+                <LocationDescription title="Equipement" contenu={locationData.equipments.map((equipement) => (
+                    <div className="padding-top" key={equipement}>{equipement}<br /></div>
+                ))} />
             </div>
-           
+
         </div>
     );
 

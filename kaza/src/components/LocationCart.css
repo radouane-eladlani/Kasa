@@ -1,6 +1,6 @@
 .location{
     border-radius: 10px;
-    background:linear-gradient(0deg, rgba(51,0,0,1.192314) -30%, rgba(255,96,96,1) 41%);
+    background:linear-gradient(0deg, rgba(51,0,0,1.192314) -130%, rgba(255,96,96,1) 33%);
     flex-wrap: wrap;
     min-height: 260px;
     display: flex;
